@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.6",
+    "date-fns": "^2.30.0",
+    "debug": "^4.3.4",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "http-errors": "^2.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.3",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.1"
+  },
+  "name": "speaking-partner-new",
+  "version": "1.0.0",
+  "engines": {
+    "node": "18.14.1",
+    "npm": "9.3.1"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "devstart": "nodemon server/app.js",
+    "client": "npm start --prefix frontend start",
+    "dev": "concurrently \"npm run devstart\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "John Fan",
+  "license": "ISC",
+  "description": ""
+}
