@@ -2,7 +2,7 @@ const asyncHandler = require('express-async-handler')
 const Info = require('../models/info')
 const User = require('../models/userAuth')
 
-//@desc create info //@route Post /api/users/create/info/:userId  //@access Private
+//@desc create profile //@route Post /api/users/create/info/:userId  //@access Private
 const createInfo = asyncHandler (async (req, res)=>{
   const user = await User.findById(req.params.userId)
   if (!req.body) {
@@ -17,7 +17,7 @@ const createInfo = asyncHandler (async (req, res)=>{
   res.status(200).json(info)
 })
 
-//@desc update info  //@route PUT /api/users/info/update/:userId  //@access Private
+//@desc update profile  //@route PUT /api/users/info/update/:userId  //@access Private
 const updateInfo = asyncHandler (async (req, res)=>{
   const user = await User.findById(req.params.userId)
   if(!user) {
@@ -35,7 +35,7 @@ const updateInfo = asyncHandler (async (req, res)=>{
   res.status(200).json(user)
 })
 
-//@desc get info //@route Post /api/users/info/:userId  //@access Private
+//@desc get user profile //@route Post /api/users/info/:userId  //@access Private
 const getInfo = asyncHandler (async (req, res)=>{
   const user = await User.findById(req.params.userId)
   if(user){

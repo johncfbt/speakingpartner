@@ -10,6 +10,8 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import UserInfo from './pages/UserInfo';
 import Profile from './pages/Profile';
+import About from './pages/About'
+import How from './pages/How'
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
           <Header />
           <Routes>
             <Route path='/' element={<Dashboard/>}/>
+            <Route path='/about' element={<About/>}/>
+            <Route path='/how' element={<How/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/register' element={<Register/>}/>
             <Route path='/info/:id/:name' element={<UserInfo />} />
@@ -30,7 +34,7 @@ function App() {
           </Routes>
         </div>
       </Router>
-      <ToastContainer />
+      {/* <ToastContainer /> */}
     </>
   );
 }

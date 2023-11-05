@@ -47,9 +47,10 @@ function UpdateInfoForm() {
       description,
       language,
     }
-    if (contact && description && language) {
-      dispatch(updateInfo(infoData))
-    }
+    // if (contact && description && language) {
+    //   dispatch(updateInfo(infoData))
+    // }
+    dispatch(updateInfo(infoData))
   }
 
   if(isLoading) {
@@ -71,7 +72,7 @@ function UpdateInfoForm() {
             id='contact'
             name='contact'
             value={contact}
-            placeholder='Input a prefered contact'
+            placeholder='like "skype: abcd"'
             onChange={onChange} 
           />
         <label htmlFor="description">Description:</label>

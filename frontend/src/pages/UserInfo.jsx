@@ -25,10 +25,10 @@ function UserInfo() {
   return (
     <>
     <div className="content">
-      <h3>Detail for {name}</h3>
     </div>
       {userInfo? (
         <div>
+          <h3>Detail for {name}</h3>
           <dl className='row'>
             <dt className='col-sm-3'>Contact: </dt>
             <dd className='col-sm-9'>{userInfo.toggleChat?userInfo.contact:"will visible after user toggle status"}</dd>
@@ -46,7 +46,10 @@ function UserInfo() {
             <dd className='col-sm-9'>{userInfo.toggleChat?"Yes":"No"}</dd>
           </dl>
         </div>
-      ) : null
+      ) : 
+      <div>
+        <h4>{name}'s profile will only be shown for logined user.</h4>
+      </div>
       }
     </>
   );

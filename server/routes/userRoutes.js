@@ -9,6 +9,6 @@ router.post('/info/create/:userId', protect, createInfo)
 router.get('/info/:userId', protect, getInfo)
 router.put('/info/update/:userId', protect, updateInfo)
 router.put('/toggle/:userId', toggleChat)
-router.get('/list', protect, list)
+router.get('/list', list)
 
 module.exports = router

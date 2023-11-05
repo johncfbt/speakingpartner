@@ -18,10 +18,13 @@ function Dashboard() {
     if(isError){
       console.log(message);
     }
-    if (!user) {
-      navigate('/login');
-    } else if (list.length === 0) {
-      // Only dispatch getList if the list is empty and user logged in.
+    // if (!user) {
+    //   navigate('/login');
+    // } else if (list.length === 0) {
+    //   // Only dispatch getList if the list is empty and user logged in.
+    //   dispatch(getList());
+    // }
+    if (list.length === 0) {
       dispatch(getList());
     }
     //claenup function
@@ -36,8 +39,10 @@ function Dashboard() {
   
   return (
     <>
+      <Link to={`/about`}><p className="text-left text-primary">About this website</p></Link>
+      <Link to={`/how`}><p className="text-left text-primary">How to use this website</p></Link>
       <section className="heading">
-        <h1>Welcome {user && user.name} <i className="bi bi-emoji-smile"></i></h1>
+        {/* <h1>Welcome {user && user.name} <i className="bi bi-emoji-smile"></i></h1> */}
         <p>User list by last active time:</p>
       </section>
       <section className="content table-responsive">

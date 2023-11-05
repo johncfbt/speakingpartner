@@ -22,12 +22,13 @@ const login = async(userData) => {
 
 //get list
 const getList = async(token) => {
-  const config = {
-    headers: {
-      Authorization: `Bearer ${token}`
-    }
-  }
-  const response = await axios.get(API_URL + 'list', config)
+  // const config = {
+  //   headers: {
+  //     Authorization: `Bearer ${token}`
+  //   }
+  // }
+  const response = await axios.get(API_URL + 'list')
+  // const response = await axios.get(API_URL + 'list', config)
   return response.data
 }
 

@@ -1,4 +1,5 @@
 import {FaSignInAlt, FaSignOutAlt, FaUser} from 'react-icons/fa'
+import {BsToggleOn} from "react-icons/bs";
 import {Link, useNavigate} from 'react-router-dom'
 import {useSelector, useDispatch} from 'react-redux'
 import {logout, reset} from '../features/auth/authSlice'
@@ -16,20 +17,20 @@ function Header() {
 
   return (
     <header className='header'>
-      <div className='logo'><Link to='/'>Speaking Partner</Link></div>
+      <div className='logo'><Link to='/'>Stutter Support Chat</Link></div>
       <ul>
         {user ? (<>
           <li>
             <Link to={`/info/update/${user._id}/${user.name}`}>
             <button className='btn' style={{ margin: 'auto' }}>
-            <FaUser /> Update
+            <FaUser /> Profile
             </button>
             </Link>
           </li>
           <li>
             <Link to={`/info/toggle/${user._id}/${user.name}`}>
             <button className='btn' style={{ margin: 'auto' }}>
-            <FaUser /> Toggle
+            <BsToggleOn /> Toggle
             </button>
             </Link>
           </li> 
@@ -42,12 +43,16 @@ function Header() {
         ): (<>
           <li>
           <Link to='/login'>
+            <button className='btn' style={{ margin: 'auto' }}>
             <FaSignInAlt /> Login
+            </button>
           </Link>
         </li>
         <li>
           <Link to='/register'>
+            <button className='btn' style={{ margin: 'auto' }}>
             <FaUser /> Register
+            </button>
           </Link>
         </li>
         </>)}

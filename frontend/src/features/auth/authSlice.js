@@ -11,7 +11,7 @@ const initialState = {
   isSuccess: false,
   isLoading: false,
   message:'',
-  userInfo:{},
+  userInfo:null,
 }
 
 //register user
@@ -37,13 +37,13 @@ export const login = createAsyncThunk('auth/login', async(user, thunkAPI) => {
 //get user list
 export const getList = createAsyncThunk('auth/getlist', async(_, thunkAPI) => {
   try {
-    const user = thunkAPI.getState().auth.user;
-    if (!user || !user.token) {
-      // Handle the case where the user is not authenticated
-      throw new Error('User is not authenticated');
-    }
-    const token = user.token
-    return await authService.getList(token)
+    // const user = thunkAPI.getState().auth.user;
+    // if (!user || !user.token) {
+    //   // Handle the case where the user is not authenticated
+    //   throw new Error('User is not authenticated');
+    // }
+    // const token = user.token
+    return await authService.getList()
   } catch (error) {
     const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString()
     return thunkAPI.rejectWithValue(message)
