@@ -30,21 +30,22 @@ function UserInfo() {
         <div>
           <h3>Detail for {name}</h3>
           <dl className='row'>
-            <dt className='col-sm-3'>Contact: </dt>
-            <dd className='col-sm-9'>{userInfo.toggleChat?userInfo.contact:"will visible after user toggle status"}</dd>
+            <dt className='col-3'>Contact: </dt>
+            <dd className='col-9'>{userInfo.toggleChat?userInfo.contact:"will visible after user toggle status"}</dd>
           </dl>
           <dl className='row'>
-            <dt className='col-sm-3'>Description: </dt>
-            <dd className='col-sm-9'>{userInfo.description}</dd>
+            <dt className='col-3'>Description: </dt>
+            <dd className='col-9'>{userInfo.description}</dd>
           </dl>
           <dl className='row'>
-            <dt className='col-sm-3'>Language: </dt>
-            <dd className='col-sm-9'>{userInfo.language}</dd>
+            <dt className='col-3'>Language: </dt>
+            <dd className='col-9'>{userInfo.language}</dd>
           </dl>
           <dl className='row'>
-            <dt className='col-sm-3'>Wanna Chat Now? </dt>
-            <dd className='col-sm-9'>{userInfo.toggleChat?"Yes":"No"}</dd>
+            <dt className='col-3'>Wanna Chat Now? </dt>
+            <dd className='col-9'>{userInfo.toggleChat?"Yes":"No"}</dd>
           </dl>
+          
         </div>
       ) : 
       <div>
