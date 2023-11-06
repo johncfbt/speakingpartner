@@ -12,7 +12,7 @@ const infoSchema = mongoose.Schema ({
   },
   description:{
     type: String,
-    maxLength:100
+    maxLength:1000
   },
   language:{
     type: String, 

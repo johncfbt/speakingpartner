@@ -35,7 +35,11 @@ function UserInfo() {
           </dl>
           <dl className='row'>
             <dt className='col-3'>Description: </dt>
-            <dd className='col-9'>{userInfo.description}</dd>
+            <dd className='col-9'>
+              <span className="text-break" style={{ whiteSpace: 'pre-wrap' }}>
+                {userInfo.description}
+              </span>
+            </dd>
           </dl>
           <dl className='row'>
             <dt className='col-3'>Language: </dt>
