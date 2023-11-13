@@ -1,7 +1,23 @@
-# speakingpartner
-Live version for this project: <br>
-https://www.stuttersupportchat.com/
+# SpeakingPartner MERN app
 
 This project use MERN (MongoDB, Express, React, NodeJS) stack.<br>
 
-To run this project: download this project, at root, run "npm run dev"
+### Install dependencies
+
+```
+# Backend deps
+npm install
+
+# Frontend deps
+cd frontend
+npm install
+```
+
+### Run Server
+
+```
+npm run dev
+```
+
+## Demo
+https://www.stuttersupportchat.com/
