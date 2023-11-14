@@ -20,8 +20,4 @@ npm run dev
 ```
 
 ## Demo
-<<<<<<< HEAD
 https://www.stuttersupportchat.com/
-=======
-https://www.stuttersupportchat.com/
->>>>>>> 6822565bacdc6218072430a5080b1fa3071ad2f3
