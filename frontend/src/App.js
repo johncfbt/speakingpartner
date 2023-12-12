@@ -10,7 +10,6 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import UserInfo from './pages/UserInfo';
 import Profile from './pages/Profile';
-import About from './pages/About'
 import How from './pages/How'
 
 
