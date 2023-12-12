@@ -22,7 +22,6 @@ function App() {
           <Header />
           <Routes>
             <Route path='/' element={<Dashboard/>}/>
-            <Route path='/about' element={<About/>}/>
             <Route path='/how' element={<How/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/register' element={<Register/>}/>

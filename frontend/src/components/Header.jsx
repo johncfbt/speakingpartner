@@ -20,7 +20,7 @@ function Header() {
     <header className='header'>
       <div className='logo'>
         <Link to='/'>
-          Stutter Support Chat
+          Speaking Partner
         </Link></div>
       <ul>
         {user ? (<>

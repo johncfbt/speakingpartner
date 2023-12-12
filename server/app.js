@@ -6,10 +6,6 @@ const {errorHandler} = require('./middleware/errorMiddleware')
 const connectDB = require('./config/db')
 const port = process.env.PORT || 5000;
 
-// Debug statement to check if .env is loaded
-console.log("below is process.env.NODE_ENV")
-console.log(process.env.NODE_ENV);
-
 connectDB()
 
 const app = express();

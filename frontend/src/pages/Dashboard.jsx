@@ -39,7 +39,6 @@ function Dashboard() {
   
   return (
     <>
-      <Link to={`/about`}><p className="text-left text-primary">About this website</p></Link>
       <Link to={`/how`}><p className="text-left text-primary">How to use this website</p></Link>
       <section className="heading">
         {/* <h1>Welcome {user && user.name} <i className="bi bi-emoji-smile"></i></h1> */}
